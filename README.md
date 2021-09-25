@@ -4,7 +4,7 @@
 
 ## Índice
 
-1. [Sobre o projeto](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Sobre)
+1. [Sobre o projeto](https://github.com/EraldoCarlosfh/ApiRest-StarWars#1-sobre-o-projeto)
 2. [Tecnologias utilizadas](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Tecnologias)
 3. [Configurando a API](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Config)
 4. [Efetuando testes](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Testes)
@@ -20,7 +20,7 @@
 
   O objetivo deste projeto é criar uma API rest que armazenará dados como nome de um planeta, clima e terreno. Retornando também a quantidade de aparições de cada planeta nos filmes de Star Wars registrada na API SWAPI. Esse projeto será consumido por um jogo criado pela B2W que aproveitará das informações da franquia.
 
-### 2.[Tecnologias](#Tecnocolgias) utilizadas
+### 2.Tecnologias utilizadas
 
   Para o presente projeto foi utilizado a linguagem Java na sua versão 8, Spring Boot 2.0 e a IDE Eclipse modificada para o framework Spring Boot(Spring Tools Suite). Para a persistência dos dados foi utilizado o banco de dados não relacional MongoDB e para testes da api o Postman junto com o framework JUNIT.
 
