@@ -1,6 +1,6 @@
 [![img](https://github.com/EraldoCarlosfh/ApiRest-StarWars/raw/main/img/sw.jpg)](https://github.com/EraldoCarlosfh/ApiRest-StarWars/blob/main/img/sw.jpg)
 
-# DESAFIO API STAR WARS B2W - ERALDO CARLOS DE OLIVEIRA FILHO
+# 	API REST STAR WARS - ERALDO CARLOS
 
 ## Índice
 
@@ -16,15 +16,15 @@
    5. [Deletando um planeta](https://github.com/EraldoCarlosfh/ApiRest-StarWars#deleta)
 6. [Considerações finais](https://github.com/EraldoCarlosfh/ApiRest-StarWars#final)
 
-### #1. Sobre o projeto
+### 1. Sobre o projeto
 
   O objetivo deste projeto é criar uma API rest que armazenará dados como nome de um planeta, clima e terreno. Retornando também a quantidade de aparições de cada planeta nos filmes de Star Wars registrada na API SWAPI. Esse projeto será consumido por um jogo criado pela B2W que aproveitará das informações da franquia.
 
-### #2.Tecnologias utilizadas
+### 2.Tecnologias utilizadas
 
   Para o presente projeto foi utilizado a linguagem Java na sua versão 8, Spring Boot 2.0 e a IDE Eclipse modificada para o framework Spring Boot(Spring Tools Suite). Para a persistência dos dados foi utilizado o banco de dados não relacional MongoDB e para testes da api o Postman junto com o framework JUNIT.
 
-### #3.Configurando a API
+### 3.Configurando a API
 
   Para utilizar o projeto deverá ser instalado o [Java SDK 8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html), o Eclipse, preferencialmente modificado para o Spring Boot([Spring Tools Suite](https://spring.io/tools/sts/all)) e o [MongoDB Community Server](https://www.mongodb.com/download-center?jmp=nav#community) baseado em seu sistema operacional.   Após isso Efetuar o download do projeto e inserir o mesmo no diretorio raiz do seu workspace do Eclipse.
 
@@ -41,11 +41,11 @@
   **Obs2:** Se ocorrer algum problema da porta default, você poderá entrar em application.properties e mudar server.port para alguma outra porta que desejar.
   **Obs3:** Para finalizar a execução do projeto buildado no maven abra o prompt, digite o comando "netstat -a -n -o" procure o processo que está utilizando a porta que você configurou ex: "8080", pegue sua Pid e digite "taskkill -f -im "NÚMERO DO PID"".
 
-### #4.Efetuando testes
+### 4.Efetuando testes
 
   Com o Eclipse aberto, ir em src/test/Java e rodar o projeto com JUNIT, o sistema efetuará alguns testes de integração e alguns testes unitários, retornando verde se tudo deu certo ou vermelho se algo deu errado.(Normalmente quando você builda o projeto com mvn package ele já efetua os testes sozinho)
 
-### #5.Funcionalidades
+### 5.Funcionalidades
 
   Vejamos algumas funcionalidades da API, os exemplos estão considerando a porta padrão 8080:
 
@@ -103,7 +103,7 @@
 
   Caso esse planeta não exista ele retornará o erro 404 não encontrado.
 
-### #6. Considerações finais
+### 6. Considerações finais
 
   API criada e documentada por Pedro Teixeira Bisognin, espero que gostem e **que a força esteja com voces!!!**
 
