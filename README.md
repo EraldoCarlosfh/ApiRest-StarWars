@@ -5,16 +5,26 @@
 ## Índice
 
 1. [Sobre o projeto](https://github.com/EraldoCarlosfh/ApiRest-StarWars#1-sobre-o-projeto)
-2. [Tecnologias utilizadas](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Tecnologias)
-3. [Configurando a API](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Config)
-4. [Efetuando testes](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Testes)
-5. Funcionalidades
-   1. [Inserindo um planeta](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Insere)
-   2. [Listando todos os planetas](https://github.com/EraldoCarlosfh/ApiRest-StarWars#Lista)
-   3. [Fazendo busca por ID](https://github.com/EraldoCarlosfh/ApiRest-StarWars#buscaid)
-   4. [Fazendo busca por NOME](https://github.com/EraldoCarlosfh/ApiRest-StarWars#buscanome)
-   5. [Deletando um planeta](https://github.com/EraldoCarlosfh/ApiRest-StarWars#deleta)
-6. [Considerações finais](https://github.com/EraldoCarlosfh/ApiRest-StarWars#final)
+
+2. [Tecnologias utilizadas](https://github.com/EraldoCarlosfh/ApiRest-StarWars#2-tecnologias-utilizadas)
+
+3. [Configurando a API](https://github.com/EraldoCarlosfh/ApiRest-StarWars#3configurando-a-api)
+
+   [NO MAVEN](https://github.com/EraldoCarlosfh/ApiRest-StarWars#no-maven)
+
+   [NO ECLIPSE](https://github.com/EraldoCarlosfh/ApiRest-StarWars#no-eclipse)
+
+4. [Efetuando testes](https://github.com/EraldoCarlosfh/ApiRest-StarWars#4efetuando-testes)
+
+5. [Funcionalidades](https://github.com/EraldoCarlosfh/ApiRest-StarWars#5funcionalidades)
+
+   1. [Inserindo um planeta](https://github.com/EraldoCarlosfh/ApiRest-StarWars#i-inserindo-um-planeta)
+   2. [Listando todos os planetas](https://github.com/EraldoCarlosfh/ApiRest-StarWars#ii-listando-todos-os-planetas)
+   3. [Fazendo busca por ID](https://github.com/EraldoCarlosfh/ApiRest-StarWars#iii-fazendo-busca-por-id)
+   4. [Fazendo busca por NOME](https://github.com/EraldoCarlosfh/ApiRest-StarWars#iv-fazendo-busca-por-nome)
+   5. [Deletando um planeta](https://github.com/EraldoCarlosfh/ApiRest-StarWars#v-deletando-um-planeta)
+
+6. [Considerações finais](https://github.com/EraldoCarlosfh/ApiRest-StarWars#6-considerações-finais)
 
 ### 1. Sobre o projeto
 
