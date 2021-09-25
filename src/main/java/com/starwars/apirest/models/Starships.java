@@ -26,8 +26,8 @@ private static final long serialVersionUID = 1L;
 	@ApiModelProperty(value = "Starship name")
 	private String name;
 	
-	@ApiModelProperty(value = "Starship length")
-	private Integer length;
+	@ApiModelProperty(value = "Starship size")
+	private Integer size;
 	
 	@ApiModelProperty(value = "Starship passengers")
 	private Integer passengers;	
@@ -45,16 +45,16 @@ private static final long serialVersionUID = 1L;
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getAge() {
-		return length;
+	public Integer getSize() {
+		return size;
 	}
-	public void setAge(Integer length) {
-		this.length = length;
+	public void setSize(Integer size) {
+		this.size = size;
 	}
-	public Integer getHeight() {
+	public Integer getPassengers() {
 		return passengers;
 	}
-	public void setHeight(Integer passengers) {
+	public void setPassengers(Integer passengers) {
 		this.passengers = passengers;
 	}
 		
