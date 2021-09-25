@@ -1,1 +1,2 @@
-![sw](C:\Users\dev\Downloads\sw.jpg)
+https://github.com/EraldoCarlosfh/ApiRest-StarWars/blob/main/img/sw.jpg
+
