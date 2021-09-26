@@ -35,10 +35,6 @@ private static final long serialVersionUID = 1L;
 	private Integer passengers;	
 	
 	
-	@OneToMany
-	private List<Pilots> pilots;
-	
-	
 	public long getId() {
 		return id;
 	}

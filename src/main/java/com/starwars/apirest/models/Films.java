@@ -36,9 +36,6 @@ public class Films implements Serializable {
 		return id;
 	}
 
-	@OneToMany
-	private List<Pilots> pilots;
-	
 	
 	public void setId(long id) {
 		this.id = id;

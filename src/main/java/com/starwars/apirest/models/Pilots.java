@@ -36,13 +36,7 @@ public class Pilots implements Serializable {
 	
 	@ApiModelProperty(value = "Pilot gender")
 	private String gender;
-	
-	@ManyToOne
-	private Films films;
-	
-	@ManyToOne
-	private Starships starships;
-	
+
 	
 	public long getId() {
 		return id;
@@ -73,22 +67,6 @@ public class Pilots implements Serializable {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
-	}
-	
-	public Films getFilms() {
-		return films;
-	}
-
-	public void setFilms(Films films) {
-		this.films = films;
-	}
-	
-	public Starships getStarships() {
-		return starships;
-	}
-	
-	public void setStarships(Starships starships) {
-		this.starships = starships;
 	}
 		
 }
