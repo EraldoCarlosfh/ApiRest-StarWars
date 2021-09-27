@@ -59,6 +59,12 @@ public class PiltosResources {
 		pilotsRepository.delete(pilot);
 	}
 	
+	@DeleteMapping(value="/delete/{id}", produces="application/json")
+	@ApiOperation(value="Delete a pilot by Id")
+	public void deletePilotById(@PathVariable(value="id") long id){
+		pilotsRepository.deleteById(id);
+	}
+	
 	@PutMapping(value="/update/pilot", produces="application/json")
 	@ApiOperation(value="Update a pilot")
 	public Pilots updatePilot(@RequestBody Pilots pilot){
