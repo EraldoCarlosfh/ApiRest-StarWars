@@ -52,6 +52,12 @@ public class StarshipsResources {
 		starshipsRepository.delete(starship);
 	}
 	
+	@DeleteMapping(value="/delete/{id}", produces="application/json")
+	@ApiOperation(value="Delete a starship")
+	public void deleteStarshipById(@PathVariable(value="id") long id){
+		starshipsRepository.deleteById(id);
+	}
+	
 	@PutMapping(value="/update/starship", produces="application/json")
 	@ApiOperation(value="Update a starship")
 	public Starships updateStarship(@RequestBody Starships starship){

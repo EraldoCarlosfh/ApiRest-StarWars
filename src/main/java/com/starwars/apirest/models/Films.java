@@ -1,27 +1,33 @@
 package com.starwars.apirest.models;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Entity
+
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name = "tb_films")
+@Entity
 public class Films implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	
 	@ApiModelProperty(value = "Film id")
+	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -31,30 +37,9 @@ public class Films implements Serializable {
 
 	@ApiModelProperty(value = "Film episode")
 	private Integer episode;
-
-	public long getId() {
-		return id;
-	}
-
 	
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Integer getEpisode() {
-		return episode;
-	}
-
-	public void setEpisode(Integer episode) {
-		this.episode = episode;
-	}
-
+	//@ManyToOne
+	//@JoinColumn(name="pilots_id")
+	//private Pilots pilots;
+		
 }

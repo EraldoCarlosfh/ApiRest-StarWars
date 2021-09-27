@@ -1,26 +1,31 @@
 package com.starwars.apirest.models;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Entity
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name="tb_pilots")
+@Entity
 public class Pilots implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@ApiModelProperty(value = "Pilot id")
+	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
@@ -36,37 +41,8 @@ public class Pilots implements Serializable {
 	
 	@ApiModelProperty(value = "Pilot gender")
 	private String gender;
-
 	
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Integer getAge() {
-		return age;
-	}
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-	public Integer getHeight() {
-		return height;
-	}
-	public void setHeight(Integer height) {
-		this.height = height;
-	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+	//@OneToMany(mappedBy="pilots")
+	//private List<Films> film;
 		
 }
