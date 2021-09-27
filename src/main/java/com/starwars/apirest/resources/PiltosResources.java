@@ -59,7 +59,7 @@ public class PiltosResources {
 		pilotsRepository.delete(pilot);
 	}
 	
-	@DeleteMapping(value="/delete/{id}", produces="application/json")
+	@DeleteMapping(value="/delete//pilot/{id}", produces="application/json")
 	@ApiOperation(value="Delete a pilot by Id")
 	public void deletePilotById(@PathVariable(value="id") long id){
 		pilotsRepository.deleteById(id);

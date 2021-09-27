@@ -52,7 +52,7 @@ public class StarshipsResources {
 		starshipsRepository.delete(starship);
 	}
 	
-	@DeleteMapping(value="/delete/{id}", produces="application/json")
+	@DeleteMapping(value="/delete/starship/{id}", produces="application/json")
 	@ApiOperation(value="Delete a starship by Id")
 	public void deleteStarshipById(@PathVariable(value="id") long id){
 		starshipsRepository.deleteById(id);
