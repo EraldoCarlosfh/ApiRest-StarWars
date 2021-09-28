@@ -115,7 +115,7 @@
 
 ### 6. Considerações finais
 
-  API criada e documentada por Pedro Teixeira Bisognin, espero que gostem e **que a força esteja com voces!!!**
+  API criada e documentada por Eraldo Carlos de Oliveira Filho, espero que gostem e **que a força esteja com voces!!!**
 
 [![img](https://github.com/EraldoCarlosfh/ApiRest-StarWars/raw/main/img/rodap%C3%A9.jpg)](https://github.com/EraldoCarlosfh/ApiRest-StarWars/blob/main/img/rodapé.jpg)
 
