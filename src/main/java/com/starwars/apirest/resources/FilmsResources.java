@@ -58,8 +58,7 @@ public class FilmsResources {
 	public Films updateFilms(@PathVariable(value="id") long id, @RequestParam(value="episode") Integer episode, @RequestParam(value="title") String title) {
 	  Films film = filmsRepository.findById(id);	
 	  if (film != null) {
-	    film.setEpisode(episode);
-	    film.setTitle(title);
+	    film.updateFilme(episode, title);
 	    return filmsRepository.save(film);
 	  }
 	  return film;

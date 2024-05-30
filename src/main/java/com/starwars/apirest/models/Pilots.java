@@ -48,6 +48,13 @@ public class Pilots implements Serializable {
 	@JsonProperty
 	private String gender;
 	
+	public void updatePilot(String newName, Integer newAge,Integer newHeight, String newGender) {
+		name = newName;		
+		age = newAge;		
+		height = newHeight;		
+		gender = newGender;		
+	}
+	
 	//@OneToMany(mappedBy="pilots")
 	//private List<Films> film;
 		

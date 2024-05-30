@@ -42,11 +42,8 @@ public class Films implements Serializable {
 	@JsonProperty
 	private Integer episode;
 
-	public void setEpisode(Integer episodeEdit) {
+	public void updateFilme(Integer episodeEdit, String titleEdit) {
 		episode = episodeEdit;		
-	}
-	
-	public void setTitle(String titleEdit) {
 		title = titleEdit;		
 	}
 	

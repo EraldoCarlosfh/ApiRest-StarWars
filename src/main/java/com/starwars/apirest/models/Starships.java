@@ -46,5 +46,10 @@ private static final long serialVersionUID = 1L;
 	@JsonProperty
 	private Integer passengers;	
 		
+	public void updateStarship(String newName, Integer newSize,Integer newPassengers) {
+		name = newName;		
+		size = newSize;		
+		passengers = newPassengers;	
+	}
 		
 }

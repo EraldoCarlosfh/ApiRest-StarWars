@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.starwars.apirest.models.Films;
+import com.starwars.apirest.models.Pilots;
 import com.starwars.apirest.models.Starships;
 import com.starwars.apirest.repository.StarshipsRepository;
 
@@ -56,12 +59,17 @@ public class StarshipsResources {
 	@ApiOperation(value="Delete a starship by Id")
 	public void deleteStarshipById(@PathVariable(value="id") long id){
 		starshipsRepository.deleteById(id);
-	}
+	}	
 	
-	@PutMapping(value="/update/starship", produces="application/json")
+	@PutMapping(value="/update/starship/{id}/{name}/{size}/{passengers}", produces="application/json")
 	@ApiOperation(value="Update a starship")
-	public Starships updateStarship(@RequestBody Starships starship){
-		return starshipsRepository.save(starship);
+	public Starships updateStarship(@PathVariable(value="id") long id, @RequestParam(value="name") String name,
+			@RequestParam(value="size") Integer size, @RequestParam(value="passengers") Integer passengers) {
+		Starships starship = starshipsRepository.findById(id);	
+	  if (starship != null) {
+		  starship.updateStarship(name, size, passengers);
+	    return starshipsRepository.save(starship);
+	  }
+	  return starship;
 	}
-
 }
