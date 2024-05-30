@@ -46,10 +46,10 @@ public class FilmsResources {
 		return filmsRepository.save(film);
 	}
 	
-	@DeleteMapping(value="/delete//film", produces="application/json")
-	@ApiOperation(value="Delete a film")
-	public void deleteFilm(@RequestBody Films film){
-		filmsRepository.delete(film);
+	@DeleteMapping(value="/delete/film/{id}", produces="application/json")
+	@ApiOperation(value="Delete a film by Id")
+	public void deleteFilmById(@PathVariable(value="id") long id){
+		filmsRepository.deleteById(id);
 	}
 	
 	@PutMapping(value="/update/film", produces="application/json")
