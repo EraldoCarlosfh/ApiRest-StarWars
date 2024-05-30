@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.starwars.apirest.models.Films;
@@ -52,10 +53,15 @@ public class FilmsResources {
 		filmsRepository.deleteById(id);
 	}
 	
-	@PutMapping(value="/update/film", produces="application/json")
+	@PutMapping(value="/update/film/{id}/{episode}/{title}", produces="application/json")
 	@ApiOperation(value="Update a film")
-	public Films updateFilms(@RequestBody Films films){
-		return filmsRepository.save(films);
+	public Films updateFilms(@PathVariable(value="id") long id, @RequestParam(value="episode") Integer episode, @RequestParam(value="title") String title) {
+	  Films film = filmsRepository.findById(id);	
+	  if (film != null) {
+	    film.setEpisode(episode);
+	    film.setTitle(title);
+	    return filmsRepository.save(film);
+	  }
+	  return film;
 	}
-
 }

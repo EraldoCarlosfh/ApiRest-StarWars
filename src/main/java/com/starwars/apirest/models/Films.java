@@ -41,6 +41,14 @@ public class Films implements Serializable {
 	@ApiModelProperty(value = "Film episode")
 	@JsonProperty
 	private Integer episode;
+
+	public void setEpisode(Integer episodeEdit) {
+		episode = episodeEdit;		
+	}
+	
+	public void setTitle(String titleEdit) {
+		title = titleEdit;		
+	}
 	
 	//@ManyToOne
 	//@JoinColumn(name="pilots_id")
