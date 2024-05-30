@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,9 +35,11 @@ public class Films implements Serializable {
 	private long id;
 
 	@ApiModelProperty(value = "Film title")
+	@JsonProperty
 	private String title;
 
 	@ApiModelProperty(value = "Film episode")
+	@JsonProperty
 	private Integer episode;
 	
 	//@ManyToOne

@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,12 +35,15 @@ private static final long serialVersionUID = 1L;
 	private long id;
 	
 	@ApiModelProperty(value = "Starship name")
+	@JsonProperty
 	private String name;
 	
 	@ApiModelProperty(value = "Starship size")
+	@JsonProperty
 	private Integer size;
 	
 	@ApiModelProperty(value = "Starship passengers")
+	@JsonProperty
 	private Integer passengers;	
 		
 		

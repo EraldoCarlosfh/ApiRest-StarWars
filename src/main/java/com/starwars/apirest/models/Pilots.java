@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -31,15 +33,19 @@ public class Pilots implements Serializable {
 	private long id;
 	
 	@ApiModelProperty(value = "Pilot name")
+	@JsonProperty
 	private String name;
 	
 	@ApiModelProperty(value = "Pilot age")
+	@JsonProperty
 	private Integer age;
 	
 	@ApiModelProperty(value = "Pilot height")
+	@JsonProperty
 	private Integer height;
 	
 	@ApiModelProperty(value = "Pilot gender")
+	@JsonProperty
 	private String gender;
 	
 	//@OneToMany(mappedBy="pilots")
