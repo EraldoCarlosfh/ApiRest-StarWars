@@ -3,6 +3,8 @@ package com.starwars.apirest.config;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -29,20 +31,29 @@ public class SwaggerConfig {
 				.build()
 				.apiInfo(metaInfo());
 	}
+ 
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("*");
+            }
+        };
+    }
 	
-		private ApiInfo metaInfo() {
-			ApiInfo apiInfo = new ApiInfo(
-					"Starwars API REST",
-					"API REST de cadastro de Personagens Starwars.",
-					"1.0",
-					"Terms of Services",
-					new Contact("Eraldo Carlos", "https://github.com/EraldoCarlosfh",
-							"eraldo1904@gmail.com"),
-					"Apache License Version 2.0",
-					"https://www.apache.org/licesen.html", new ArrayList<VendorExtension>()
-					);
-				
-					return apiInfo;
-		}
+	private ApiInfo metaInfo() {
+		ApiInfo apiInfo = new ApiInfo(
+				"Starwars API REST",
+				"API REST de cadastro de Personagens Starwars.",
+				"1.0",
+				"Terms of Services",
+				new Contact("Eraldo Carlos", "https://github.com/EraldoCarlosfh",
+						"eraldo1904@gmail.com"),
+				"Apache License Version 2.0",
+				"https://www.apache.org/licesen.html", new ArrayList<VendorExtension>()
+				);
+			
+				return apiInfo;
+	}
 
 }

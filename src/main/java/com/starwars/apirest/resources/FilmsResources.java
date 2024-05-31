@@ -35,25 +35,25 @@ public class FilmsResources {
 		return filmsRepository.findAll();
 	}
 	
-	@GetMapping(value="/film/{id}", produces="application/json")
+	@GetMapping(value="/films/{id}", produces="application/json")
 	@ApiOperation(value="Return only one film")
 	public Films getFilmById(@PathVariable(value="id") long id){
 		return filmsRepository.findById(id);
 	}
 	
-	@PostMapping(value="/save/film", produces="application/json")
+	@PostMapping(value="/save/films", produces="application/json")
 	@ApiOperation(value="Save a film")
 	public Films saveFilm(@RequestBody Films film){
 		return filmsRepository.save(film);
 	}
 	
-	@DeleteMapping(value="/delete/film/{id}", produces="application/json")
+	@DeleteMapping(value="/delete/films/{id}", produces="application/json")
 	@ApiOperation(value="Delete a film by Id")
 	public void deleteFilmById(@PathVariable(value="id") long id){
 		filmsRepository.deleteById(id);
 	}
 	
-	@PutMapping(value="/update/film/{id}/{episode}/{title}", produces="application/json")
+	@PutMapping(value="/update/films/{id}/{episode}/{title}", produces="application/json")
 	@ApiOperation(value="Update a film")
 	public Films updateFilms(@PathVariable(value="id") long id, @RequestParam(value="episode") Integer episode, @RequestParam(value="title") String title) {
 	  Films film = filmsRepository.findById(id);	

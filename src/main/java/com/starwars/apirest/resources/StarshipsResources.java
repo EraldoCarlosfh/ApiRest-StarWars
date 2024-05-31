@@ -37,39 +37,32 @@ public class StarshipsResources {
 		return starshipsRepository.findAll();
 	}
 	
-	@GetMapping(value="/starship/{id}", produces="application/json")
+	@GetMapping(value="/starships/{id}", produces="application/json")
 	@ApiOperation(value="Return only one starship")
 	public Starships getStarshipById(@PathVariable(value="id") long id){
 		return starshipsRepository.findById(id);
 	}
 	
-	@PostMapping(value="/save/starship", produces="application/json")
+	@PostMapping(value="/save/starships", produces="application/json")
 	@ApiOperation(value="Save a starship")
 	public Starships saveStarship(@RequestBody Starships starship){
 		return starshipsRepository.save(starship);
 	}
 	
-	@DeleteMapping(value="/delete/starship", produces="application/json")
-	@ApiOperation(value="Delete a starship")
-	public void deleteStarship(@RequestBody Starships starship){
-		starshipsRepository.delete(starship);
-	}
-	
-	@DeleteMapping(value="/delete/starship/{id}", produces="application/json")
+	@DeleteMapping(value="/delete/starships/{id}", produces="application/json")
 	@ApiOperation(value="Delete a starship by Id")
 	public void deleteStarshipById(@PathVariable(value="id") long id){
 		starshipsRepository.deleteById(id);
 	}	
 	
-	@PutMapping(value="/update/starship/{id}/{name}/{size}/{passengers}", produces="application/json")
+	@PutMapping(value="/update/starships/{id}", produces="application/json")
 	@ApiOperation(value="Update a starship")
-	public Starships updateStarship(@PathVariable(value="id") long id, @RequestParam(value="name") String name,
-			@RequestParam(value="size") Integer size, @RequestParam(value="passengers") Integer passengers) {
-		Starships starship = starshipsRepository.findById(id);	
-	  if (starship != null) {
-		  starship.updateStarship(name, size, passengers);
-	    return starshipsRepository.save(starship);
+	public Starships updateStarship(@RequestBody Starships starship, @PathVariable("id") Integer id) {
+		Starships starshipEdit = starshipsRepository.findById(id);		
+	  if (starshipEdit != null) {
+		  starshipEdit.updateStarship(starship);
+	    return starshipsRepository.save(starshipEdit);
 	  }
-	  return starship;
+	  return starshipEdit;
 	}
 }

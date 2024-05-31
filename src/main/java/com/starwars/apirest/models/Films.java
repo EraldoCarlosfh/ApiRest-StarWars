@@ -31,6 +31,7 @@ public class Films implements Serializable {
 	@ApiModelProperty(value = "Film id")
 	@EqualsAndHashCode.Include
 	@Id
+	@JsonProperty
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 

@@ -31,6 +31,7 @@ private static final long serialVersionUID = 1L;
 	@ApiModelProperty(value = "Starship id")
 	@EqualsAndHashCode.Include
 	@Id
+	@JsonProperty
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
@@ -46,10 +47,10 @@ private static final long serialVersionUID = 1L;
 	@JsonProperty
 	private Integer passengers;	
 		
-	public void updateStarship(String newName, Integer newSize,Integer newPassengers) {
-		name = newName;		
-		size = newSize;		
-		passengers = newPassengers;	
+	public void updateStarship(Starships starship) {
+		name = starship.name;		
+		size = starship.size;		
+		passengers = starship.passengers;	
 	}
 		
 }

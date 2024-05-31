@@ -29,6 +29,7 @@ public class Pilots implements Serializable {
 	@ApiModelProperty(value = "Pilot id")
 	@EqualsAndHashCode.Include
 	@Id
+	@JsonProperty
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
@@ -48,11 +49,11 @@ public class Pilots implements Serializable {
 	@JsonProperty
 	private String gender;
 	
-	public void updatePilot(String newName, Integer newAge,Integer newHeight, String newGender) {
-		name = newName;		
-		age = newAge;		
-		height = newHeight;		
-		gender = newGender;		
+	public void updatePilot(Pilots pilot) {
+		name = pilot.name;		
+		age = pilot.age;		
+		height = pilot.height;		
+		gender = pilot.gender;		
 	}
 	
 	//@OneToMany(mappedBy="pilots")
